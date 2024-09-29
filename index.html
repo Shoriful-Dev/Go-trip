@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link rel="stylesheet" href="./output.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<!-- ----------------------------------- All Header Part Start --------------------------------- -->
+<section class="fixed top-0 left-0 w-[100%]">
+ <nav class="max-w-container m-auto flex justify-between items-center">
+  <div class="nav_logo pt-4 p-2">
+    <a href="#">
+      <img src="images/nav logo.png" alt="nav logo.png">
+    </a>
+  </div>
+  <div class="menu md:flex md:pt-8 gap-8 pt-10 sm:hidden">
+    <a href="#" class="font-jost font-medium text-[15px] hover:text-red-600 cursor-pointer">Home</a>
+    <a href="#" class="font-jost font-medium text-[15px] hover:text-red-600 cursor-pointer">Categories</a>
+    <a href="#" class="font-jost font-medium text-[15px] hover:text-red-600 cursor-pointer">Destination</a>
+    <a href="#" class="font-jost font-medium text-[15px] hover:text-red-600 cursor-pointer">Blog</a>
+    <a href="#" class="font-jost font-medium text-[15px] hover:text-red-600 cursor-pointer">Pages</a>
+    <a href="#" class="font-jost font-medium text-[15px] hover:text-red-600 cursor-pointer">Contact</a>
+  </div>
+  <div class="button pt-5 gap-4 flex items-center sm:px-2">
+    <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+    <a class="py-3 px-6 border hover:bg-[#051036] hover:text-white border-black rounded" href="#">Become An Expert</a>
+    <a class="py-3 px-6 border hover:bg-[#051036] hover:text-white border-black rounded" href="#">Sign In / Register</a>
+  </div>
+  <button class="p-3 md:hidden text-[20px] pt-4" onclick="handleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <!-- Fixed and hidden by default -->
+  <div class="nav_dialog fixed z-10 md:hidden bg-white inset-0 p-3 hidden">
+    <div class="navber flex justify-between">
+      <div class="nav_logo">
+        <a href="#">
+         <img src="images/nav logo.png" alt="nav logo.png">
+        </a>
+      </div>
+      <button class="md:hidden text-[25px]" onclick="handleMenu()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div>
+     <div class="click_Menu mt-6">
+      <a href="#" class="font-jost font-medium text-[15px] cursor-pointer mt-3 pt-3 hover:bg-gray-50 block rounded-lg delay-200">Home</a>
+      <a href="#" class="font-jost font-medium text-[15px] cursor-pointer mt-3 pt-3 hover:bg-gray-50 block rounded-lg delay-200">Categories</a>
+      <a href="#" class="font-jost font-medium text-[15px] cursor-pointer mt-3 pt-3 hover:bg-gray-50 block rounded-lg delay-200">Destination</a>
+      <a href="#" class="font-jost font-medium text-[15px] cursor-pointer mt-3 pt-3 hover:bg-gray-50 block rounded-lg delay-200">Blog</a>
+      <a href="#" class="font-jost font-medium text-[15px] cursor-pointer mt-3 pt-3 hover:bg-gray-50 block rounded-lg delay-200">Pages</a>
+      <a href="#" class="font-jost font-medium text-[15px] cursor-pointer mt-3 pt-3 hover:bg-gray-50 block rounded-lg delay-200">Contact</a>
+    </div>
+    </div>
+  </div>
+</nav>
+</section>
+  <!-- --------------------------------- All Header Part END ---------------------------------- -->
+
+  <!-- --------------------------------- All Menu Part Start ---------------------------------- -->
+   <section>
+    <div class="menu pt-[220px] pb-[250px] bg-[#F8D448] h-[700px]">
+    <h1 class="font-jost font-semibold text-[60px] text-center">Search for the Best Car Hire Deals</h1>
+    <p class="font-jost text-[16px] text-center mt-5">Book better cars from local hosts across the US and around the world.</p>
+    <div id="button" class="bg-white p-6 shadow-lg rounded-lg md:max-w-5xl sm:max-w-3xl mx-auto flex mt-10 relative z-30">
+     <form class="grid grid-cols-6 gap-10 items-center">
+       <!-- Pick up location -->
+       <div class="col-span-1">
+         <label class="block text-[15px] font-medium text-gray-800">Pick up location</label>
+         <span class="text-[15px] font-jost">City or Airport</span>
+       </div>
+       
+       <!-- Drop off location -->
+       <div class="col-span-1">
+         <label class="block text-sm font-semibold text-gray-800">Drop off location</label>
+         <span class="text-[15px] font-jost">City or Airport</span>
+       </div>
+   
+       <!-- Pick up date -->
+       <div class="col-span-1">
+         <label class="block text-sm font-semibold text-gray-800">Pick up</label>
+         <span class="text-[15px] font-jost">7 Mar - 10:00</span>
+       </div>
+   
+       <!-- Drop off date -->
+       <div class="col-span-1">
+         <label class="block text-sm font-semibold text-gray-800">Drop off</label>
+         <span class="text-[15px] font-jost">7 Mar - 10:00</span>
+       </div>
+   
+       <!-- Passenger -->
+       <div class="col-span-1">
+         <label class="block text-sm font-semibold text-gray-800">Passenger (optional)</label>
+         <span class="text-[15px] font-jost">4</span>
+       </div>
+   
+       <!-- Search button -->
+       <div class="col-span-1 flex justify-end">
+         <button type="submit" class="bg-[#051036] text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-700 transition duration-200">
+           <i class="fa-solid fa-magnifying-glass mr-2"></i>Search
+         </button>
+       </div>
+     </form>
+    </div>
+   </div>
+   <div class="slider container m-auto mt-[-260px] mb-[100px] flex z-20">
+    <img src="./images/Main image.jpg" alt="Main photo.jpg" class="w-[1500px] h-[650px] rounded-[10px]">
+   </div>
+   </section>
+  <!-- --------------------------------- All Menu Part END ------------------------------------ -->
+
+  <!-- ------------------------------ All Choose Part Start ---------------------------------- -->
+   <section>
+    <div class="choose_part container m-auto text-center">
+     <h3 class="font-semibold font-jost text-[30px]">Why Choose Us</h3>
+     <span class="font-jost text-[16px]">These popular destinations have a lot to offer</span>
+    </div>
+    <div class="choose_box grid grid-cols-3 w-[1180px] h-[192px] m-auto justify-center gap-32 mt-[30px]">
+     <div class="choose_left pt-5 text-center w-[300px]">
+      <img class="pl-[40%] pb-5" src="images/certificate.png" alt="certificate.png">
+      <h3 class="text-[18px] font-medium font-jost">Best Price Guarantee</h3>
+      <span class="text-[15px] font-jost text-[#697488]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+     </div>
+     <div class="choose_left pt-5 text-center w-[300px]">
+      <img class="pl-[40%] pb-5" src="images/calendar (1).png" alt="calendar (1).png">
+      <h3 class="text-[18px] font-medium font-jost">Best Price Guarantee</h3>
+      <span class="text-[15px] font-jost text-[#697488]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+     </div>
+     <div class="choose_left pt-5 text-center w-[300px]">
+      <img class="pl-[40%] pb-5" src="images/customer-service.png" alt="customer-service.png">
+      <h3 class="text-[18px] font-medium font-jost">Best Price Guarantee</h3>
+      <span class="text-[15px] font-jost text-[#697488]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+     </div>
+    </div>
+   </section>
+  <!-- -------------------------------- All Choose Part END ---------------------------------- -->
+
+  <!-- ------------------------------- All Populer Part Start --------------------------------- -->
+   <section>
+    <div class="populer_text mt-[100px]">
+     <h3 class="text-[30px] font-semibold font-jost text-center">Popular Car Hire</h3>
+     <h4 class="text-[16px] font-jost text-center text-[#697488]">Interdum et malesuada fames ac ante ipsum</h4>
+    </div>
+    <div class="populer_box w-[1290px] m-auto mt-10 cursor-pointer">
+      <img src="images/all items.png" alt="all items.png">
+     </div>
+     <div class="container m-auto justify-center flex mt-10 cursor-pointer">
+      <img src="images/Arrow-Bullet.png" alt="">
+     </div>
+   </section>
+  <!-- -------------------------------- All Populer Part END ---------------------------------- -->
+
+  <!-- ----------------------------- All Destinations Part Start ------------------------------ -->
+   <div class="Destinations_part mt-[100px] mb-[100px]">
+    <div class="text_D text-center">
+     <h3 class="text-[30px] font-semibold font-jost">Top Destinations in UK</h3>
+     <span class="text-4 font-jost text-[#697488]">These popular destinations have a lot to offer</span>
+    </div>
+    <div class="container m-auto justify-center flex mt-10 cursor-pointer">
+     <img src="images/full items.png" alt="full items.png">
+    </div>
+   </div>
+  <!-- ---------------------------- All Destinations Part END --------------------------------- -->
+
+  <!-- ---------------------------- All Customer Reviews Part Start --------------------------- -->
+  <section class="border border-[#051036] h-[1000px] bg-[#051036]">
+      <div class="customerReviews_part mb-10">
+        <div class="text-review">
+          <h3 class="font-jost font-semibold text-[30px] text-center mt-10 text-white">Customer Reviews</h3>
+          <h4 class="font-jost text-[16px] text-center text-white">Interdum et malesuada fames ac ante ipsum</h4>
+        </div>
+           <div class="w-[1290px] m-auto flex mt-14">
+            <div class="w-[410px] h-[347px] bg-white m-auto review_box p-10 leading-7 border">
+              <div class="flex w-[350px] gap-32">
+               <p class="text-4 font-jost font-medium text-[#3554D1] mb-3">Hotel Equatorial Melaka</p>
+               <img class="w-[36px] h-[25px]" src="images/quets.png" alt="">
+              </div>
+               <p class="text-4 font-jost font-medium w-[330px] mt-3">"Our family was traveling via bullet train between cities in Japan with our luggage - the location for this hotel made that so easy. Agoda price was fantastic. "</p>
+               <div class="container m-auto grid grid-cols-3">
+                 <div class="flex w-[330px] gap-7 mt-8">
+                   <div class="">
+                     <img src="images/round.png" alt="">
+                   </div>
+                   <div>
+                     <p>Courtney Henry</p>
+                     <p class="text-[14px] font-jost">Web Designer</p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <div class="w-[410px] h-[347px] bg-white m-auto review_box p-10 leading-7 border ">
+              <div class="flex w-[350px] gap-32">
+               <p class="text-4 font-jost font-medium text-[#3554D1] mb-3">Hotel Equatorial Melaka</p>
+               <img class="w-[36px] h-[25px]" src="images/quets.png" alt="">
+              </div>
+               <p class="text-4 font-jost font-medium w-[330px] mt-3">"Our family was traveling via bullet train between cities in Japan with our luggage - the location for this hotel made that so easy. Agoda price was fantastic. "</p>
+               <div class="container m-auto grid grid-cols-3">
+                 <div class="flex w-[330px] gap-7 mt-8">
+                   <div class="">
+                     <img src="images/round.png" alt="">
+                   </div>
+                   <div>
+                     <p>Courtney Henry</p>
+                     <p class="text-[14px] font-jost">Web Designer</p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <div class="w-[410px] h-[347px] bg-white m-auto review_box p-10 leading-7 border ">
+              <div class="flex w-[350px] gap-32">
+               <p class="text-4 font-jost font-medium text-[#3554D1] mb-3">Hotel Equatorial Melaka</p>
+               <img class="w-[36px] h-[25px]" src="images/quets.png" alt="">
+              </div>
+               <p class="text-4 font-jost font-medium w-[330px] mt-3">"Our family was traveling via bullet train between cities in Japan with our luggage - the location for this hotel made that so easy. Agoda price was fantastic. "</p>
+               <div class="container m-auto grid grid-cols-3">
+                 <div class="flex w-[330px] gap-7 mt-8">
+                   <div class="">
+                     <img src="images/round.png" alt="">
+                   </div>
+                   <div>
+                     <p>Courtney Henry</p>
+                     <p class="text-[14px] font-jost">Web Designer</p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+          </div>
+           </div>
+       <div class="w-[1290px] m-auto grid grid-cols-6 gap-32 mb-20">
+        <div class="text-white">
+          <p>13m+</p>
+          <p>Happy People</p>
+        </div>
+        <div class="text-white">
+          <p>4.88</p>
+          <p>Overall rating</p>
+          <div class="w-[78px] h-[10px]">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+        <div class="bg-[#051036]">
+          <img src="images/amazon-4.png" alt="images/amazon-4.png">
+        </div>
+        <div class="">
+          <img src="images/dropcam.png" alt="dropcam.png">
+        </div>
+        <div class="">
+          <img src="images/logitech-2-1-3-1.png" alt="logitech-2-1-3-1.png">
+        </div>
+        <div class="">
+          <img src="images/Spotify-2-2.png" alt="Spotify-2-2.png">
+        </div>
+       </div>
+  </section>
+  <!-- ----------------------------- All Customer Reviews Part END ----------------------------- -->
+
+  <!-- ---------------------------------- All Counter Part Start  -------------------------------- -->
+   <section>
+    <div class="counter_part w-[1290px] m-auto grid grid-cols-2 gap-5 mt-32 mb-28">
+      <div class="w-[520px]">
+        <h4 class="font-jost text-[30px] font-semibold pb-10">GoTrip is a World Leading Car Hire Booking Platform</h4>
+        <p class="font-jost pb-7">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <button class="w-[179px] h-[50px] px-[30px] py-[15px] border text-[15px] font-medium font-jost bg-[#051036] text-white rounded mb-10">Learn More<i class="fa-solid fa-arrow-trend-up ml-3"></i></button>
+      </div>
+      <div class="grid grid-cols-2 gap-8 w-[520px]  shadow-lg">
+        <div class="counter_item text-center">
+          <h1 class="counter text-[40px] font-bold text-[#051036]">4,958</h1>
+          <p class="text-lg font-medium text-gray-600 mt-2">Destinations</p>
+        </div>
+        <div class="counter_item text-center">
+          <h1 class="counter text-[40px] font-bold text-[#051036]">2,869</h1>
+          <p class="text-lg font-medium text-gray-600 mt-2">Total Properties</p>
+        </div>
+        <div class="counter_item text-center">
+          <h1 class="counter text-[40px] font-bold text-[#051036]">2M</h1>
+          <p class="text-lg font-medium text-gray-600 mt-2">Happy customers</p>
+        </div>
+        <div class="counter_item text-center">
+          <h1 class="counter text-[40px] font-bold text-[#051036]">574,974</h1>
+          <p class="text-lg font-medium text-gray-600 mt-2">Our Volunteers</p>
+        </div>
+      </div>
+    </div>
+   </section>
+  <!-- --------------------------------- All Counter Part END --------------------------------- -->
+
+  <!-- --------------------------------- All Next Trip Part Start --------------------------------- -->
+  <section>
+    <div class="next_trip">
+     <div>
+       <h4 class="w-[1290px] m-auto text-[30px] font-semibold font-jost">Get inspiration for your next trip</h4>
+     </div>
+     <div class="w-[1290px] m-auto flex justify-between items-center">
+       <div class="font-jost text-lg text-gray-600">Interdum et malesuada fames</div>
+       <div>
+         <button class="px-5 py-3 shadow-md rounded-lg font-jost font-medium hover:bg-gray-100 transition">
+           Move<i class="fa-solid fa-arrow-trend-up ml-3"></i>
+         </button>
+       </div>
+     </div>
+    </div>
+
+
+    <div class="w-[1290px] m-auto grid grid-cols-3 gap-8 mt-14 mb-14 ">
+      <!-- First Column -->
+      <div class="flex flex-col">
+        <img src="./images/first image.jpg" alt="Trip 1" class="w-[410px] h-[445px] object-cover rounded-lg">
+        <h3 class="font-jost text-xl font-semibold mt-4">10 European ski destinations you should visit this winter</h3>
+        <p class="font-jost text-gray-600 mt-2">December 16, 2022</p>
+      </div>
+
+      <!-- Second Column -->
+      <div class="flex flex-col">
+        <img src="./images/second image.jpg" alt="Trip 2" class="w-[410px] h-[445px] object-cover rounded-lg">
+        <h3 class="font-jost text-xl font-semibold mt-4">Where can I go? 5 amazing countries that are open right now</h3>
+        <p class="font-jost text-gray-600 mt-2">December 16, 2022</p>
+      </div>
+
+      <!-- Third Column -->
+      <div class="flex flex-col space-y-4">
+        <div class="flex items-center space-x-4">
+          <img src="./images/small first.jpg" alt="Trip 3" class="w-[140px] h-[140px] object-cover rounded-lg">
+          <div>
+            <h3 class="font-jost text-lg font-semibold">The world’s most romantic destinations</h3>
+            <p class="font-jost text-sm text-gray-600">December 16, 2022</p>
+          </div>
+        </div>
+        <div class="flex items-center space-x-4">
+          <img src="./images/small secon.jpg" alt="Trip 4" class="w-[140px] h-[140px] object-cover rounded-lg">
+          <div>
+            <h3 class="font-jost text-lg font-semibold">The world’s top 6 tropical escapes</h3>
+            <p class="font-jost text-sm text-gray-600">December 16, 2022</p>
+          </div>
+        </div>
+        <div class="flex items-center space-x-4">
+          <img src="./images/small third.jpg" alt="Trip 5" class="w-[130px] h-[130px] object-cover rounded-lg">
+          <div>
+            <h3 class="font-jost text-lg font-semibold">The top travel destinations for 2022</h3>
+            <p class="font-jost text-sm text-gray-600">December 16, 2022</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+  <!-- --------------------------------- All Next Trip Part END -------------------------------- -->
+
+  <!-- ------------------------------ All Mobile App Part Start ------------------------------- -->
+   <div class="w-[1500px] m-auto mt-[100px] mb-[150px]">
+    <img src="images/mobile app.png" alt="">
+   </div>
+  <!-- ------------------------------- All Mobile App Part END --------------------------------- -->
+   
+  <!-- ------------------------------- All Frequently Asked Questions Part Start --------------------------------- -->
+  <section class="w-[850px] h-[570px] mx-auto mb-[100px]">
+    <h2 class="font-jost text-3xl font-semibold text-center mb-4">Frequently Asked Questions</h2>
+    <p class="font-jost text-gray-600 text-center mb-8">Interdum et malesuada fames</p>
+    
+    <div class="space-y-4">
+      <div class="border border-gray-200 rounded-lg">
+        <button class="flex justify-between items-center w-full p-4 text-left">
+          <span class="font-jost text-lg font-semibold flex items-center"><i class="fa-solid fa-circle-minus mr-2.5"></i>What do I need to hire a car?</span>
+          <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="p-4 bg-gray-50">
+          <p class="font-jost text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+      </div>
+      
+      <div class="border border-gray-200 rounded-lg">
+        <button class="flex justify-between items-center w-full p-4 text-left">
+          <span class="font-jost text-lg font-semibold flex items-center"><i class="fa-solid fa-circle-plus mr-2.5"></i>How old do I have to be to rent a car?</span>
+          <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="border border-gray-200 rounded-lg">
+        <button class="flex justify-between items-center w-full p-4 text-left">
+          <span class="font-jost text-lg font-semibold flex items-center"><i class="fa-solid fa-circle-plus mr-2.5"></i>Can I book a hire car for someone else?</span>
+          <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="border border-gray-200 rounded-lg">
+        <button class="flex justify-between items-center w-full p-4 text-left">
+          <span class="font-jost text-lg font-semibold flex items-center"><i class="fa-solid fa-circle-plus mr-2.5"></i>How do I find the cheapest car hire deal?</span>
+          <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="border border-gray-200 rounded-lg">
+        <button class="flex justify-between items-center w-full p-4 text-left">
+          <span class="font-jost text-lg font-semibold flex items-center"><i class="fa-solid fa-circle-plus mr-2.5"></i>How do I find the cheapest car hire deal?</span>
+          <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- ------------------------------- All Frequently Asked Questions Part END ----------------------------------- -->
+   
+  <!-- ------------------------------- All Footer Part Start ----------------------------------- -->
+  <section class="bg-[#051036] h-[486px]">
+    <div class="grid grid-cols-6 w-[1290px] m-auto pt-[75px]">
+      <div class="font-jost text-white">
+        <p class="font-medium">Contact Us</p>
+        <p class="text-[14px] pt-7">Toll Free Customer Care</p>
+        <p class="text-[18px] font-medium">+(1) 123 456 7890</p>
+        <p class="text-[14px] pt-8">Need live support?</p>
+        <p class="text-[18px] font-medium">hi@gotrip.com</p>
+      </div>
+
+      <div class="font-jost text-white">
+        <p class="font-medium">Company</p>
+        <p class="pt-10">About Us</p>
+        <p class="text-[15px] pt-3">Careers</p>
+        <p class="text-[15px] pt-3">Blog</p>
+        <p class="text-[15px] pt-3">Press</p>
+        <p class="text-[15px] pt-3">Gift Cards</p>
+        <p class="text-[15px] pt-3">Magazine</p>
+      </div>
+
+      <div class="font-jost text-white">
+        <p class="font-medium">Support</p>
+        <p class="text-[15px] pt-10">Contact</p>
+        <p class="text-[15px] pt-3">Legal Notice</p>
+        <p class="text-[15px] pt-3">Privacy Policy</p>
+        <p class="text-[15px] pt-3">Terms and Conditions</p>
+        <p class="text-[15px] pt-3">Sitemap</p>
+      </div>
+
+      <div class="font-jost col-span-1 text-white">
+        <p class="font-medium pb-10">Other Services</p>
+        <p class="text-[15px] pt-3">Car hire</p>
+        <p class="text-[15px] pt-3">Activity Finder</p>
+        <p class="text-[15px] pt-3">Tour List</p>
+        <p class="text-[15px] pt-3">Flight finder</p>
+        <p class="text-[15px] pt-3">Cruise Ticket</p>
+        <p class="text-[15px] pt-3">Holiday Rental</p>
+        <p class="text-[15px] pt-3">Travel Agents</p>
+      </div>
+      <div class="font-jost text-white">
+        <p class="font-jost pb-8">Get Updates & More</p>
+        <form id="subscribe-form">
+          <input type="email" id="email-input" placeholder="Your Email" required class="p-3 w-[410px] text-black absolute">
+          <button class="underline relative right-[-320px] bottom-[-10px] text-black">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="w-[1290px] h-[1px] m-auto border border-blue-950 mt-10"></div>
+    <div class="w-[1290px] m-auto grid grid-cols-2">
+      <div class="text-white flex gap-8 pt-5">
+        <p>© 2022 GoTrip LLC All rights reserved.</p>
+        <p>. Privacy       . Terms       . Site Map</p>
+      </div>
+
+
+      <div class="text-white flex gap-3 pt-5 justify-end">
+        <p><i class="fa-solid fa-globe"></i>  <span class="underline">English (US)</span> <i class="fa-solid fa-dollar-sign"></i> <span class="underline">USD</span></p>
+        <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+      </div>
+
+    
+    </div>
+  </section>
+  <!-- ------------------------------- All Footer Part End ----------------------------------- -->
+ <script src="tailwind.config.js"></script>
+ <script src="js/script.js"></script>
+</body>
+</html>
